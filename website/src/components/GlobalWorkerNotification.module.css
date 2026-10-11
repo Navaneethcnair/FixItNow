@@ -1,0 +1,123 @@
+.toastCard {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  width: 380px;
+  max-width: calc(100vw - 32px);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1.5px solid rgba(79, 70, 229, 0.3);
+  box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.3);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: toastSpringPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.toastCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toastHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toastAvatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 900;
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+  flex-shrink: 0;
+}
+
+.toastBadge {
+  font-size: 10px;
+  font-weight: 900;
+  color: #4f46e5;
+  background: rgba(79, 70, 229, 0.08);
+  padding: 2px 8px;
+  border-radius: 100px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.toastSenderName {
+  font-size: 14.5px;
+  font-weight: 900;
+  color: #0f172a;
+  display: block;
+  margin-top: 2px;
+}
+
+.closeBtn {
+  background: #f1f5f9;
+  border: none;
+  color: #64748b;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.quoteBox {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #4f46e5;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 13.5px;
+  color: #0f172a;
+  font-weight: 600;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.actionBtn {
+  width: 100%;
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  color: #ffffff;
+  border: none;
+  padding: 13px 18px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+  transition: all 0.15s ease;
+}
+.actionBtn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+@keyframes toastSpringPop {
+  0% { transform: translateX(120%) scale(0.85); opacity: 0; }
+  65% { transform: translateX(-10px) scale(1.03); opacity: 1; }
+  100% { transform: translateX(0) scale(1); opacity: 1; }
+}

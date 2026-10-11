@@ -1,0 +1,9 @@
+node_modules/
+.next/
+.env
+.env.local
+.local-*.json
+venv/
+__pycache__/
+runs/
+temp/

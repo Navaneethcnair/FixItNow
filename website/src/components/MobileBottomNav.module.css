@@ -1,0 +1,107 @@
+.mobileBottomNav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileBottomNav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    min-height: 60px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(203, 213, 225, 0.7);
+    z-index: 1000;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 6px 2px calc(6px + env(safe-area-inset-bottom, 0px)) 2px;
+    box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.08);
+    box-sizing: border-box;
+  }
+
+  .navItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex: 1 1 0%;
+    min-width: 0;
+    height: 48px;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+    transition: color 0.15s ease, transform 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+    padding: 2px 0;
+  }
+
+  .navItem:active {
+    transform: scale(0.94);
+  }
+
+  .navItemActive {
+    color: #4f46e5;
+    font-weight: 700;
+  }
+
+  .navIcon {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2;
+    flex-shrink: 0;
+    transition: stroke 0.15s ease;
+  }
+
+  .navItemActive .navIcon {
+    stroke: #4f46e5;
+  }
+
+  .navItem span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    text-align: center;
+    line-height: 1.1;
+  }
+
+  .uploadItem {
+    position: relative;
+    overflow: visible;
+  }
+
+  .uploadBtnInner {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4f46e5 0%, #0ea5e9 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
+    margin-top: -18px;
+    margin-bottom: 2px;
+    flex-shrink: 0;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+  }
+
+  .uploadItem:active .uploadBtnInner {
+    transform: scale(0.92);
+  }
+
+  .uploadLabel {
+    font-size: 10px;
+    font-weight: 700;
+    color: #4f46e5;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 1.1;
+  }
+}

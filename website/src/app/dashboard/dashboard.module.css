@@ -1,0 +1,716 @@
+.page {
+  padding-top: calc(var(--navbar-height) + var(--space-8));
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-bottom: var(--space-16);
+}
+
+.loadingState {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-20) 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid var(--border);
+  padding-bottom: var(--space-4);
+}
+
+.greeting {
+  font-size: var(--text-xl);
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.6px;
+}
+
+.subtext {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* Premium Horizontal Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.statCard {
+  background: var(--surface);
+  border: 1.5px solid #cbd5e1;
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  box-shadow: 0 6px 20px -2px rgba(15, 23, 42, 0.06);
+  transition: all var(--transition-base);
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(79, 70, 229, 0.14);
+  border-color: #4f46e5;
+}
+
+.statIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNum {
+  font-size: var(--text-lg);
+  font-weight: 900;
+  color: var(--text-primary);
+}
+
+.statLbl {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: var(--space-1);
+  background: #cbd5e1;
+  padding: 4px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.tab {
+  flex: 1;
+  padding: 12px;
+  background: none;
+  border: none;
+  border-radius: calc(var(--radius-md) - 2px);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.tabActive {
+  background: var(--surface);
+  color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* List Item Cards */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.jobCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--surface);
+  border: 1.5px solid #cbd5e1;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  box-shadow: 0 8px 24px -2px rgba(15, 23, 42, 0.06);
+  transition: all var(--transition-base);
+}
+
+.jobCard:hover {
+  transform: translateY(-2px);
+  border-color: #4f46e5;
+  box-shadow: 0 12px 28px -4px rgba(79, 70, 229, 0.14);
+}
+
+.jobThumb {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+}
+
+.jobThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jobInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.jobTitle {
+  font-weight: 800;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  letter-spacing: -0.2px;
+  margin-bottom: 6px;
+}
+
+.jobMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.tradeTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.jobDate {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+
+/* Booking Card */
+.bookingCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  background: var(--surface);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 18px;
+  box-shadow: 0 4px 15px -2px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bookingCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(79, 70, 229, 0.2);
+  box-shadow: 0 12px 28px -4px rgba(79, 70, 229, 0.12);
+}
+
+.bookingLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bookingAvatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--primary-bg);
+  flex-shrink: 0;
+  border: 2px solid white;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+}
+
+.bookingAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bookingAvatarFb {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 15px;
+  background: linear-gradient(135deg, var(--primary-bg) 0%, rgba(79, 70, 229, 0.15) 100%);
+}
+
+.bookingInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bookingWorker {
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--text-primary);
+  letter-spacing: -0.2px;
+}
+
+.bookingJob {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.bookingDate {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.bookingRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.bookingPrice {
+  font-weight: 900;
+  color: var(--primary);
+  font-size: 16px;
+}
+
+/* Premium Status Pill Badges */
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.status_pending, .status_requested {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.status_assigned, .status_accepted {
+  background: #f0f9ff;
+  color: #0284c7;
+}
+
+.status_in_progress {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.status_completed {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.status_cancelled, .status_rejected {
+  background: #fdf2f8;
+  color: #db2777;
+}
+
+/* Empty State */
+.empty {
+  text-align: center;
+  padding: var(--space-16) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  color: var(--text-secondary);
+}
+
+.emptyIcon {
+  font-size: 54px;
+}
+
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Booking Status Modal Overlay */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modalCard {
+  background: var(--surface);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 24px;
+  padding: 32px 28px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.05);
+  border: none;
+  font-size: 16px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.modalCloseBtn:hover {
+  background: rgba(15, 23, 42, 0.1);
+  color: var(--text-primary);
+}
+
+.modalHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modalTag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.modalTitle {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.modalWorkerRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 16px;
+}
+
+.modalAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--primary-bg);
+  flex-shrink: 0;
+  border: 2px solid white;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+}
+
+.modalAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modalAvatarFb {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 16px;
+}
+
+.modalWorkerInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.modalWorkerName {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.modalServiceTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.modalPrice {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+.modalPrice span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Modal Tracker */
+.modalTracker {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px 4px;
+  position: relative;
+}
+
+.modalStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
+  min-width: 64px;
+}
+
+.stepDot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #cbd5e1;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.stepDone .stepDot {
+  background: #10b981;
+  border-color: #10b981;
+  color: white;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.stepCurrent .stepDot {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+}
+
+.stepLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.stepDone .stepLabel,
+.stepCurrent .stepLabel {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.stepLine {
+  height: 3px;
+  flex: 1;
+  background: #e2e8f0;
+  margin-top: 13.5px;
+  margin-left: -6px;
+  margin-right: -6px;
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.lineActive {
+  background: #10b981;
+}
+
+.modalMetaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 14px;
+  background: #f8fafc;
+  border-radius: 14px;
+}
+
+.modalMetaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metaItemLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+.metaItemVal {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.modalStatusPill {
+  font-size: 12px;
+  font-weight: 800;
+  color: #d97706;
+  background: #fef3c7;
+  padding: 3px 10px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+/* Feedback & Rating Section */
+.feedbackSection {
+  margin-top: 14px;
+  padding: 16px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+  border: 1.5px solid #86efac;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feedbackTitle {
+  font-size: 15px;
+  font-weight: 800;
+  color: #166534;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.starPickerRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.starPickerBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  transition: transform 0.15s ease;
+}
+
+.starPickerBtn:hover {
+  transform: scale(1.2);
+}
+
+.feedbackTextarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 70px;
+  outline: none;
+  background: #ffffff;
+}
+
+.feedbackTextarea:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.submitFeedbackBtn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.submitFeedbackBtn:hover {
+  background: #059669;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+}
+
+.reviewedBadge {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
